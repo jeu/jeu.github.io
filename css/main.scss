@@ -30,10 +30,10 @@ body {
 a {
     text-decoration: underline;
     color: $primary; 
-}
 
-a:hover {
-    color: $darkgray;
+    &:hover {
+        color: $darkgray;    
+    }
 }
 
 /* Helpers */
@@ -48,8 +48,10 @@ a:hover {
     visibility: hidden;
 }
 
-.wf-active .head__heading, .wf-inactive .head__heading {
-    visibility: visible;
+.wf-active, .wf-inactive {
+    .head__heading {
+        visibility: visible;
+    }
 }
 
 /* Header */
@@ -57,11 +59,11 @@ a:hover {
     box-shadow: 0 4px 1px $gray;   
     -webkit-transition: background-color 1.6s ease;
     transition: background-color 1.6s ease; 
-}
 
-.head:hover {
-    background-color: $alt-bgc;   
- }
+    &:hover {
+        background-color: $alt-bgc;
+    }
+}
 
 .head__heading, .post_state_single .post__heading {
     display: block;
@@ -94,23 +96,23 @@ a:hover {
 /* Posts */
 .post_type_media {
     text-align: center;
-}
 
-.post_type_media a {
-    text-decoration: none;
-}
+    a {
+        text-decoration: none;
+    }
 
-.post_type_media .post__text {
-    text-align: justify;
-    border:1px solid transperent;
+    .post__text {
+        text-align: justify;
+        border:1px solid transperent; 
+    }
 }
 
 .post__media {
     margin: 6em 0 0;
-}
 
-.post__media:hover {
-    opacity: 0.83;
+    &:hover {
+        opacity: 0.83;  
+    }
 }
 
 .post__text_container {   
@@ -119,30 +121,34 @@ a:hover {
     color: $primary;
     -webkit-transition: background-color 1.6s ease, color 1.6s ease;
     transition: background-color 1.6s ease, color  1.6s ease; 
-}
 
-.post__text_container:hover{
-    background-color: $alt-bgc;
-    color: $darkgray;
+    &:hover {
+        background-color: $alt-bgc;
+        color: $darkgray; 
+    }
 }
 
 .post__text {
     margin-top: 2.2em;
     margin-bottom: 1.8em;
     text-decoration: underline;
-}
 
-.post__text p {
+    p {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+    }
 }
 
 /* Single post view */
 .post_state_single {
     .post__heading {
         margin-bottom: 1em; 
+    }
+
+    .post__media:hover {
+        opacity: 1; 
     }
 
     .post__text_container {   
@@ -160,6 +166,7 @@ a:hover {
         strong {
             text-transform: uppercase;
         }
+
         a {
             text-decoration: underline;
         }
@@ -205,7 +212,7 @@ a:hover {
         transition: none; 
     }
 
-    .rss-subscribe {
+    .rss {
         display: none;
     }  
 }  
