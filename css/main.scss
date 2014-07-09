@@ -1,0 +1,220 @@
+---
+---
+/* Variables */
+$black: #222;
+$white: #FFF;
+$green: #78BDA1;
+
+$lightgray: #F9F9F9;
+$gray: #BFBFBF;
+$darkgray: #4B4B4B; 
+$darkergray: #323232;
+
+$primary: $black;
+$secondary: $green;
+$base-bgc: $white;
+$alt-bgc: $lightgray;
+
+$base-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$alt-font: 'Libre Baskerville', serif;
+
+/* Base */
+html,button,input,select,textarea{color:#222}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}audio,canvas,img,video{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}
+
+body {
+    font: 15px/2.2 $base-font;
+    background-color: $base-bgc; 
+    color: $primary;
+}
+
+a {
+    text-decoration: underline;
+    color: $primary; 
+}
+
+a:hover {
+    color: $darkgray;
+}
+
+/* Helpers */
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.wf-loading .head__heading {
+    visibility: hidden;
+}
+
+.wf-active .head__heading, .wf-inactive .head__heading {
+    visibility: visible;
+}
+
+/* Header */
+.head {
+    box-shadow: 0 4px 1px $gray;   
+    -webkit-transition: background-color 1.6s ease;
+    transition: background-color 1.6s ease; 
+}
+
+.head:hover {
+    background-color: $alt-bgc;   
+ }
+
+.head__heading, .post_state_single .post__heading {
+    display: block;
+    position: relative;
+    width: 7.8em;
+    margin: 3em auto;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: bold;    
+    font-family: $alt-font;
+    color: $secondary;
+    -webkit-animation: changecolor 8s infinite;
+    animation: changecolor 8s infinite;
+    cursor: default;
+}
+
+@-webkit-keyframes changecolor {
+    0%   {color: hsl(150, 26%, 61%);}
+    60%  {color: hsl(150, 34%, 61%);}
+    100% {color: hsl(150, 26%, 61%);}                
+}
+
+@keyframes changecolor {
+    0%   {color: hsl(150, 26%, 61%);}
+    60%  {color: hsl(150, 34%, 61%);}
+    100% {color: hsl(150, 26%, 61%);}                   
+}
+
+/* Posts */
+.post_type_media {
+    text-align: center;
+}
+
+.post_type_media a {
+    text-decoration: none;
+}
+
+.post_type_media .post__text {
+    text-align: justify;
+    border:1px solid transperent;
+}
+
+.post__media {
+    margin: 6em 0 0;
+}
+
+.post__media:hover {
+    opacity: 0.83;
+}
+
+.post__text_container {   
+    width: 100%;
+    display: block;
+    color: $primary;
+    -webkit-transition: background-color 1.6s ease, color 1.6s ease;
+    transition: background-color 1.6s ease, color  1.6s ease; 
+}
+
+.post__text_container:hover{
+    background-color: $alt-bgc;
+    color: $darkgray;
+}
+
+.post__text {
+    margin-top: 2.2em;
+    margin-bottom: 1.8em;
+    text-decoration: underline;
+}
+
+.post__text p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Single post view */
+.post_state_single {
+    .post__heading {
+        margin-bottom: 1em; 
+    }
+
+    .post__text_container {   
+        background-color: $alt-bgc;
+    }
+
+    .post__text {
+        text-decoration: none;
+    }
+
+    .post__meta{
+        list-style-type: none;
+        text-transform: lowercase;
+
+        strong {
+            text-transform: uppercase;
+        }
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .foot {
+        text-decoration: underline;
+    }
+}
+
+/* Footer */
+.foot {
+    font-size: 0.7em;
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+}  
+
+/* Responsive */
+@media (max-width: 768px) {
+    .head { 
+        display: none; 
+        box-shadow: none;  
+        -webkit-transition: none;
+        transition: none;
+    }
+
+    .post_type_media .post__text {
+        text-align: left;
+     }
+
+    .post_state_single .post__heading {
+        margin: 1em auto;
+     }
+
+    .post__media {
+        margin: 0;
+    }
+
+    .post__text_container {   
+        background-color: $alt-bgc;
+        -webkit-transition: none;
+        transition: none; 
+    }
+
+    .rss-subscribe {
+        display: none;
+    }  
+}  
+
+@media (max-width: 432px) {
+    .post__media { 
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto; 
+    }
+} 

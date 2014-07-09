@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Mobile first responsive landing page"
+date: 2014-07-07 14:58:25
+categories: javascript css
+repo: site
+videoWidth: 384
+videoHeight: 592
+blurb: Concept for a mobile-first landing page.
+---
+
+Concept for a mobile-first landing page.
