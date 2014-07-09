@@ -1,5 +1,7 @@
 ---
 ---
+/* Github Pages don't compile Sass to CSS :( */
+
 /* Variables */
 $black: #222;
 $white: #FFF;
@@ -100,11 +102,6 @@ a {
     a {
         text-decoration: none;
     }
-
-    .post__text {
-        text-align: justify;
-        border:1px solid transperent; 
-    }
 }
 
 .post__media {
@@ -129,9 +126,11 @@ a {
 }
 
 .post__text {
-    margin-top: 2.2em;
-    margin-bottom: 1.8em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     text-decoration: underline;
+    text-align: justify;
+    border:1px solid transperent;
 
     p {
     -webkit-hyphens: auto;
